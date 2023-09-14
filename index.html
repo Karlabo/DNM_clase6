@@ -25,7 +25,7 @@
             //creando la función cities
             async function cities() {
                 seleccionado.disabled = false;
-                const primero = await fetch("https://raw.githubusercontent.com/Karlabo/DNM-clase6/main/relevant_russian_cities.json");
+                const primero = await fetch("https://raw.githubusercontent.com/Karlabo/DNM_clase6/main/russian_cities.json");
                 const ciudades = await primero.json();
                 console.log(ciudades);
                 ciudades.forEach((c) => (seleccionado.innerHTML += `<option>${c.name}</option>`));
