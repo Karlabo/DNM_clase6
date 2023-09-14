@@ -34,7 +34,7 @@
             cities().catch((error) => console.error(error));
             //creando la función weather
             async function weather(ciudad) {
-                const segundo = await fetch("https://api.openweathermap.org/data/2.5/weather?q=" + ciudad + ",cl&units=metric&appid=81b121ae72a8fb6817a43c0d9b7086d1&lang=es");
+                const segundo = await fetch("https://api.openweathermap.org/data/2.5/weather?q=" + ciudad + ",ru&units=metric&appid=81b121ae72a8fb6817a43c0d9b7086d1&lang=es");
                 const tiempo = await segundo.json();
                 if (tiempo.main.temp <= 10) {
                     todo.style.background = "cyan"; 
