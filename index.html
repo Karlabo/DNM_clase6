@@ -26,7 +26,7 @@ h1 {
 #app {
     width: min(80vw, 500px);
     padding: 2rem 2rem 0;
-    background: #fff;
+    background: #ffffffc3;
     box-shadow: 0 0 4px rgba(100, 100, 100, 0.1);
     position: absolute;
     left: 50%;
@@ -80,15 +80,15 @@ select {
                 const segundo = await fetch("https://api.openweathermap.org/data/2.5/weather?q=" + ciudad + ",ru&units=metric&appid=81b121ae72a8fb6817a43c0d9b7086d1&lang=es");
                 const tiempo = await segundo.json();
                 if (tiempo.main.temp <= 10) {
-                    todo.style.background = "#65EEEC"; 
+                    todo.style.background = "#A1D9FFBF"; //los ultimos dos lugares indican el grado de transparencia segun tabla opasity/hexadecimal
                 } else if (tiempo.main.temp > 10 && tiempo.main.temp <= 15) {
-                    todo.style.background = "#4E9EF3"; 
+                    todo.style.background = "#48C9B0BF"; 
                 } else if (tiempo.main.temp > 15 && tiempo.main.temp <= 20) {
-                    todo.style.background = "#7E4EF3"; 
+                    todo.style.background = "#FFC300BF"; 
                 } else if (tiempo.main.temp > 20) {
-                    todo.style.background = "#F34EC1"; 
+                    todo.style.background = "#FF5733BF"; 
                 } else {
-                    todo.style.background = "darkorange"; 
+                    todo.style.background = "#AD50BF"; 
                 }
                 console.log(tiempo);
                 respuesta.innerHTML = `<div><img src="https://openweathermap.org/img/wn/${tiempo.weather[0].icon}.png"></div><div>Temperatura: <strong>${tiempo.main.temp}</strong> ºC</div><div>Humedad: <strong>${tiempo.main.humidity}</strong>%&nbsp;&nbsp;</div>Viento: <strong>${tiempo.wind.speed}</strong> Km/hr&nbsp;&nbsp;</div>`;
