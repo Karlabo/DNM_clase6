@@ -80,13 +80,13 @@ select {
                 const segundo = await fetch("https://api.openweathermap.org/data/2.5/weather?q=" + ciudad + ",ru&units=metric&appid=81b121ae72a8fb6817a43c0d9b7086d1&lang=es");
                 const tiempo = await segundo.json();
                 if (tiempo.main.temp <= 10) {
-                    todo.style.background = "cyan"; 
+                    todo.style.background = "#65EEEC"; 
                 } else if (tiempo.main.temp > 10 && tiempo.main.temp <= 15) {
-                    todo.style.background = "lightblue"; 
+                    todo.style.background = "#4E9EF3"; 
                 } else if (tiempo.main.temp > 15 && tiempo.main.temp <= 20) {
-                    todo.style.background = "lightgreen"; 
+                    todo.style.background = "#7E4EF3"; 
                 } else if (tiempo.main.temp > 20) {
-                    todo.style.background = "gold"; 
+                    todo.style.background = "#F34EC1"; 
                 } else {
                     todo.style.background = "darkorange"; 
                 }
